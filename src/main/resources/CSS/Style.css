@@ -1,0 +1,29 @@
+.buttonEntry:hover {
+    -fx-text-fill:  #8a3324;
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+.buttonEntry:pressed {
+    -fx-scale-y: 1;
+    -fx-scale-x: 1;
+    -fx-text-fill: #6e291d;
+}
+
+.buttonEntry{
+    -fx-text-fill: #ad402d;
+}
+
+.buttonOpenReg:hover {
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+
+.buttonOpenReg:pressed {
+    -fx-scale-y: 1;
+    -fx-scale-x: 1;
+}
+
+.buttonOpenReg{
+    -fx-text-fill: white;
+}
