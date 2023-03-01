@@ -30,6 +30,21 @@ public class DatabaseHandler {
         return resSet;
     }
 
+    public ResultSet autoStaff(OneStrings oneStrings) {
+        ResultSet resSet = null;
+        String select = "SELECT * FROM staff WHERE phone =? AND password = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            prSt.setString(1, oneStrings.getStringOne());
+            prSt.setString(2, oneStrings.getStringTwo());
+            resSet = prSt.executeQuery();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resSet;
+    }
+
+
 
 }
 

@@ -18,12 +18,12 @@
             <Font name="Verdana" size="16.0" />
          </font>
       </PasswordField>
-      <Button fx:id="buttonLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="167.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white; -fx-border-color: none; -fx-background-radius: 30;" styleClass="buttonEntry" text="Войти" textAlignment="CENTER" textFill="#ad402d">
+      <Button fx:id="buttonLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="167.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white; -fx-border-color: none; -fx-background-radius: 30;" styleClass="button-entry" text="Войти" textAlignment="CENTER" textFill="#ad402d">
          <font>
             <Font name="Verdana Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="buttonOpenReg" alignment="CENTER" layoutX="154.0" layoutY="216.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="98.0" style="-fx-background-color: none; -fx-border-color: none;" styleClass="buttonOpenReg" text="Регистрация" textFill="WHITE">
+      <Button fx:id="buttonOpenReg" alignment="CENTER" layoutX="154.0" layoutY="216.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="98.0" style="-fx-background-color: none; -fx-border-color: none;" styleClass="button-open-reg" text="Регистрация" textFill="WHITE">
          <font>
             <Font name="Verdana" size="12.0" />
          </font>

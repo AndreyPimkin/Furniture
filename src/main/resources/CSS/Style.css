@@ -1,29 +1,59 @@
-.buttonEntry:hover {
+.button-entry:hover {
     -fx-text-fill:  #8a3324;
     -fx-scale-y: 1.1;
     -fx-scale-x: 1.1;
 }
 
-.buttonEntry:pressed {
+.button-entry:pressed {
     -fx-scale-y: 1;
     -fx-scale-x: 1;
     -fx-text-fill: #6e291d;
 }
 
-.buttonEntry{
+.button-entry{
     -fx-text-fill: #ad402d;
 }
 
-.buttonOpenReg:hover {
+.button-open-reg:hover {
     -fx-scale-y: 1.1;
     -fx-scale-x: 1.1;
 }
 
-.buttonOpenReg:pressed {
+.button-open-reg:pressed {
     -fx-scale-y: 1;
     -fx-scale-x: 1;
 }
 
-.buttonOpenReg{
+.button-open-reg{
+    -fx-text-fill: white;
+}
+
+
+
+.tab-pane *.tab-header-area *.tab-header-background {
+    -fx-background-color:transparent;
+}
+
+.tab-pane-client {
+    -fx-tab-min-width:150px;
+    -fx-tab-max-width:150px;
+    -fx-tab-min-height:25px;
+    -fx-tab-max-height:25px;
+}
+
+.tab-pane-client .tab-label {
+    -fx-font-family: Century;
+    -fx-font-size: 17;
+    -fx-text-fill: #FFFFFF;
+}
+
+.tab-client {
+    -fx-font-family: Verdana;
+    -fx-font-size: 17;
+    -fx-background-color: #ad402d;
+}
+
+.tab-client:selected {
+    -fx-background-color: #b01d07;
     -fx-text-fill: white;
 }

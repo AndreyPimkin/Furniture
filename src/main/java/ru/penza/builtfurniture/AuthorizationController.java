@@ -37,6 +37,9 @@ public class AuthorizationController {
     @FXML
     private PasswordField inputPassword;
 
+    public static int id;
+    public static int idPerson;
+
     @FXML
     void initialize() {
         buttonOpenReg.setOnAction(actionEvent -> {
@@ -52,7 +55,30 @@ public class AuthorizationController {
             resultAuto = dbHandler.autoUser(oneStrings);
             try {
                 if(resultAuto.next()){
-                    openWindow("ru/penza/builtfurniture/.fxml", buttonOpenReg, "Регистрация");
+                    id = resultAuto.getInt(1); // запоминает ай ди клиента
+                    openWindow("ru/penza/builtfurniture/mainPage.fxml", buttonOpenReg, "Регистрация");
+                }
+                else{
+                    oneStrings = new OneStrings();
+                    oneStrings.setStringOne(inputNumber.getText());
+                    oneStrings.setStringTwo(inputPassword.getText());
+                    resultAuto = dbHandler.autoStaff(oneStrings);
+                    if(resultAuto.next()){
+                        idPerson = resultAuto.getInt(1);
+                        if (resultAuto.getString("role").equals("Администратор")) {
+                            openWindow("ru/penza/builtfurniture/admin.fxml", buttonOpenReg, "Регистрация");
+                        }
+                        else if (resultAuto.getString("role").equals("Модератор")) {
+                            openWindow("ru/penza/builtfurniture/moderator.fxml", buttonOpenReg, "Регистрация");
+                        }
+                        else if (resultAuto.getString("role").equals("Мастер")) {
+                            openWindow("ru/penza/builtfurniture/master.fxml", buttonOpenReg, "Регистрация");
+                        }
+                        else if (resultAuto.getString("role").equals("Рабочий")) {
+                            openWindow("ru/penza/builtfurniture/worker.fxml", buttonOpenReg, "Регистрация");
+                        }
+                    }
+
                 }
             } catch (SQLException e) {
                 throw new RuntimeException(e);
