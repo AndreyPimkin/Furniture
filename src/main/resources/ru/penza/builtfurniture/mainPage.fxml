@@ -8,23 +8,23 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: white;" styleClass="tab-pane-client" stylesheets="@../../../CSS/Style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: white;" styleClass="tab-pane-client" stylesheets="@../../../CSS/Style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.penza.builtfurniture.MainPageController">
   <tabs>
     <Tab styleClass="tab-client" text="В наличии">
          <content>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TableView layoutX="15.0" layoutY="25.0" prefHeight="225.0" prefWidth="615.0">
+                  <TableView fx:id="tableOne" layoutX="15.0" layoutY="25.0" prefHeight="225.0" prefWidth="615.0">
                     <columns>
-                      <TableColumn prefWidth="126.0" text="Название" />
-                      <TableColumn prefWidth="97.0" text="Цена" />
-                        <TableColumn prefWidth="114.0" text="Материал" />
-                        <TableColumn prefWidth="108.0" text="Произведено" />
-                        <TableColumn prefWidth="81.0" text="Цвет" />
-                        <TableColumn prefWidth="85.0" text="Размеры" />
+                      <TableColumn fx:id="nameOne" prefWidth="126.0" text="Название" />
+                      <TableColumn fx:id="priceOne" prefWidth="97.0" text="Цена" />
+                        <TableColumn fx:id="materialOne" prefWidth="114.0" text="Материал" />
+                        <TableColumn fx:id="dateOne" prefWidth="108.0" text="Произведено" />
+                        <TableColumn fx:id="colorOne" prefWidth="81.0" text="Цвет" />
+                        <TableColumn fx:id="sizeOne" prefWidth="85.0" text="Размеры" />
                     </columns>
                   </TableView>
-                  <Button fx:id="buttonBack" layoutX="273.0" layoutY="285.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #ad402d;" text="Купить" textFill="WHITE">
+                  <Button fx:id="buttonBuy" layoutX="273.0" layoutY="285.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #ad402d;" text="Купить" textFill="WHITE">
                      <font>
                         <Font name="Verdana Bold" size="16.0" />
                      </font>
@@ -36,17 +36,17 @@
          <content>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TableView layoutX="15.0" layoutY="25.0" prefHeight="225.0" prefWidth="615.0">
+                  <TableView fx:id="tableTwo" layoutX="15.0" layoutY="25.0" prefHeight="225.0" prefWidth="615.0">
                      <columns>
-                        <TableColumn prefWidth="126.0" text="Название" />
-                        <TableColumn prefWidth="97.0" text="Цена" />
-                        <TableColumn prefWidth="114.0" text="Материал" />
-                        <TableColumn prefWidth="108.0" text="Произведено" />
-                        <TableColumn prefWidth="81.0" text="Цвет" />
-                        <TableColumn prefWidth="85.0" text="Размеры" />
+                        <TableColumn fx:id="nameTwo" prefWidth="126.0" text="Название" />
+                        <TableColumn fx:id="priceTwo" prefWidth="97.0" text="Цена" />
+                        <TableColumn fx:id="materialTwo" prefWidth="114.0" text="Материал" />
+                        <TableColumn fx:id="dateTwo" prefWidth="108.0" text="Произведено" />
+                        <TableColumn fx:id="colorTwo" prefWidth="81.0" text="Цвет" />
+                        <TableColumn fx:id="sizeTwo" prefWidth="85.0" text="Размеры" />
                      </columns>
                   </TableView>
-                  <Button fx:id="buttonBack1" layoutX="261.0" layoutY="285.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: #ad402d;" text="Заказать" textFill="WHITE">
+                  <Button fx:id="buttonBuyTwo" layoutX="261.0" layoutY="285.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: #ad402d;" text="Заказать" textFill="WHITE">
                      <font>
                         <Font name="Verdana Bold" size="16.0" />
                      </font>
@@ -58,11 +58,11 @@
          <content>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TableView layoutX="164.0" layoutY="41.0" prefHeight="225.0" prefWidth="323.0">
+                  <TableView fx:id="tableThree" layoutX="26.0" layoutY="14.0" prefHeight="225.0" prefWidth="593.0">
                      <columns>
-                        <TableColumn prefWidth="126.0" text="Номер" />
-                        <TableColumn prefWidth="97.0" text="Название" />
-                        <TableColumn prefWidth="97.0" text="Статус" />
+                        <TableColumn fx:id="number" prefWidth="84.0" text="Номер" />
+                        <TableColumn fx:id="nameThree" prefWidth="280.0" text="Название" />
+                        <TableColumn fx:id="status" prefWidth="228.0" text="Статус" />
                      </columns>
                   </TableView>
                </children>

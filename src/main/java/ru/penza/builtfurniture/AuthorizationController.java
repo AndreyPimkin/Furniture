@@ -37,7 +37,7 @@ public class AuthorizationController {
     @FXML
     private PasswordField inputPassword;
 
-    public static int id;
+    public static int idClient;
     public static int idPerson;
 
     @FXML
@@ -55,7 +55,7 @@ public class AuthorizationController {
             resultAuto = dbHandler.autoUser(oneStrings);
             try {
                 if(resultAuto.next()){
-                    id = resultAuto.getInt(1); // запоминает ай ди клиента
+                    idClient = resultAuto.getInt(1); // запоминает ай ди клиента
                     openWindow("ru/penza/builtfurniture/mainPage.fxml", buttonOpenReg, "Регистрация");
                 }
                 else{
