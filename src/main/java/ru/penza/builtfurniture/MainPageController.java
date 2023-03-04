@@ -10,6 +10,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import ru.penza.builtfurniture.POJO.OneStrings;
 import ru.penza.builtfurniture.server.DatabaseHandler;
 
@@ -79,6 +82,11 @@ public class MainPageController {
     @FXML
     private TableView<OneStrings> tableThree;
 
+
+    @FXML
+    private ImageView image;
+
+
     @FXML
     private TextField nameUser;
 
@@ -96,6 +104,7 @@ public class MainPageController {
 
     OneStrings oneStrings;
     OneStrings oneStringsTwo;
+    private static Object val;
     @FXML
     void initialize() {
         try {
@@ -134,18 +143,33 @@ public class MainPageController {
             oneStringsTwo.setStringTwo(oneStrings.getStringOne());
             oneStringsTwo.setStringThree(formattedDate);
             oneStringsTwo.setStringFour("Заказан");
-            dbHandler.buyFurniture(oneStringsTwo);
+            dbHandler.orderFurniture(oneStringsTwo);
         });
 
         buttonSave.setOnAction(actionEvent -> {
             oneStringsTwo = new OneStrings();
             oneStringsTwo.setStringOne(String.valueOf(AuthorizationController.idClient));
             oneStringsTwo.setStringTwo(surnameUser.getText());
-            oneStringsTwo.setStringThree(nameOne.getText());
+            oneStringsTwo.setStringThree(nameUser.getText());
             oneStringsTwo.setStringFour(patronymicUser.getText());
             oneStringsTwo.setStringFive(String.valueOf(birthdayUser.getValue()));
             dbHandler.changePersonalData(oneStringsTwo);
         });
+
+        tableOne.setRowFactory(tv -> {
+            TableRow<OneStrings> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (! row.isEmpty() && event.getButton()== MouseButton.PRIMARY
+                        && event.getClickCount() == 2) {
+                    OneStrings clickedRow = row.getItem();
+                    val = clickedRow.getStringOne();
+                    image.setImage(new Image("file:src/main/resources/ru/penza/builtfurniture/picture/" + val + ".jpg"));
+                }
+            });
+            return row ;
+        });
+
+
     }
 
     private void initFurnitureOne() throws SQLException {

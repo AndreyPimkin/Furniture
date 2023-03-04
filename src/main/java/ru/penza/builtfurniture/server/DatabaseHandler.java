@@ -132,6 +132,16 @@ public class DatabaseHandler {
         }
     }
 
+    public void signUpUser(OneStrings oneStrings) throws ClassNotFoundException {
+        String insert = "INSERT INTO  client(number,password)" + "VALUES(?,?)";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            prSt.setString(1, oneStrings.getStringOne());
+            prSt.setString(2, oneStrings.getStringTwo());
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();}}
+
 }
 
 
