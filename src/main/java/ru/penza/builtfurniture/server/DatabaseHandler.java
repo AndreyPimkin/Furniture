@@ -12,14 +12,14 @@ public class DatabaseHandler {
 
     public Connection getDbConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        String connectionString = "jdbc:sqlserver://DESKTOP-2JU1ID3:1433;databaseName=cargo_driving;user=sa;password=sa;encrypt=false;";
+        String connectionString = "jdbc:sqlserver://DESKTOP-2JU1ID3:1433;databaseName=build_in_furniture;user=sa;password=sa;encrypt=false;";
         dbConnection = DriverManager.getConnection(connectionString);
         return dbConnection;
     }
 
     public ResultSet autoUser(OneStrings oneStrings) {
         ResultSet resSet = null;
-        String select = "SELECT * FROM client WHERE phone =? AND password = ?";
+        String select = "SELECT * FROM client WHERE number =? AND password = ?";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             prSt.setString(1, oneStrings.getStringOne());
@@ -33,7 +33,7 @@ public class DatabaseHandler {
 
     public ResultSet autoStaff(OneStrings oneStrings) {
         ResultSet resSet = null;
-        String select = "SELECT * FROM staff WHERE phone =? AND password = ?";
+        String select = "SELECT * FROM staff WHERE number =? AND password = ?";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             prSt.setString(1, oneStrings.getStringOne());
@@ -71,7 +71,7 @@ public class DatabaseHandler {
 
     public ResultSet getHistory(OneStrings oneStrings) {
         ResultSet resSet = null;
-        String select = "SELECT purchase.id_purchase, furniture.type, purchase.status FROM purchase" +
+        String select = "SELECT purchase.id_purchase, furniture.type, purchase.status FROM purchase " +
                 "INNER JOIN furniture ON purchase.id_furniture = furniture.id_furniture WHERE id_client = ?";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
@@ -115,7 +115,7 @@ public class DatabaseHandler {
 
     public void changePersonalData(OneStrings oneStrings) {
         String insert = "UPDATE client SET " +
-                "fullname = (?,' ', ?, ' ', ?), " +
+                "full_name = (? + ' ' +  ? + ' ' + ?), " +
                 "birthday = ? " +
                 "WHERE id_client = ?";
         try {
@@ -141,6 +141,24 @@ public class DatabaseHandler {
             prSt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();}}
+
+
+    public ResultSet getFurnitureByModerator() {
+        ResultSet resSet = null;
+        String select = "SELECT purchase.id_purchase, client.full_name, client.number, furniture.id_furniture, furniture.type " +
+                "FROM purchase " +
+                "INNER JOIN furniture ON purchase.id_furniture = furniture.id_furniture " +
+                "INNER JOIN client ON purchase.id_client = client.id_client " +
+                "WHERE purchase.status = 'Заказан'";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resSet;
+    }
+
 
 }
 

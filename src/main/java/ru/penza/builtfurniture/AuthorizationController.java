@@ -43,7 +43,7 @@ public class AuthorizationController {
     @FXML
     void initialize() {
         buttonOpenReg.setOnAction(actionEvent -> {
-            openWindow("ru/penza/builtfurniture/registration.fxml", buttonOpenReg, "Регистрация");
+            openWindow("/ru/penza/builtfurniture/registration.fxml", buttonOpenReg, "Регистрация");
         });
 
         buttonLogin.setOnAction(actionEvent -> {
@@ -56,7 +56,7 @@ public class AuthorizationController {
             try {
                 if(resultAuto.next()){
                     idClient = resultAuto.getInt(1); // запоминает ай ди клиента
-                    openWindow("ru/penza/builtfurniture/mainPage.fxml", buttonOpenReg, "Регистрация");
+                    openWindow("/ru/penza/builtfurniture/mainPage.fxml", buttonOpenReg, "Главная страница");
                 }
                 else{
                     oneStrings = new OneStrings();
@@ -66,10 +66,10 @@ public class AuthorizationController {
                     if(resultAuto.next()){
                         idPerson = resultAuto.getInt(1);
                         if (resultAuto.getString("role").equals("Администратор")) {
-                            openWindow("ru/penza/builtfurniture/admin.fxml", buttonOpenReg, "Регистрация");
+                            openWindow("/ru/penza/builtfurniture/admin.fxml", buttonOpenReg, "Регистрация");
                         }
                         else if (resultAuto.getString("role").equals("Модератор")) {
-                            openWindow("ru/penza/builtfurniture/moderator.fxml", buttonOpenReg, "Регистрация");
+                            openWindow("/ru/penza/builtfurniture/moderator.fxml", buttonOpenReg, "Модератор");
                         }
                         else if (resultAuto.getString("role").equals("Мастер")) {
                             openWindow("ru/penza/builtfurniture/master.fxml", buttonOpenReg, "Регистрация");

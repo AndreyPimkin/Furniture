@@ -45,12 +45,12 @@ public class RegistrationController {
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
-            AuthorizationController.openWindow("ru/penza/builtfurniture/authorization.fxml", buttonBack, "Авторизация");
+            AuthorizationController.openWindow("/ru/penza/builtfurniture/authorization.fxml", buttonBack, "Авторизация");
         });
 
 
         buttonBack.setOnAction(actionEvent -> {
-            AuthorizationController.openWindow("ru/penza/builtfurniture/authorization.fxml", buttonBack, "Авторизация");
+            AuthorizationController.openWindow("/ru/penza/builtfurniture/authorization.fxml", buttonBack, "Авторизация");
         });
 
     }

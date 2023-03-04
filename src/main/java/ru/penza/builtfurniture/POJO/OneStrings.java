@@ -101,5 +101,13 @@ public class OneStrings {
         this.stringFive = stringFive;
         this.stringSix = stringSix;
     }
+
+    public OneStrings(String stringOne, String stringTwo, String stringThree, String stringFour, String stringFive) {
+        this.stringOne = stringOne;
+        this.stringTwo = stringTwo;
+        this.stringThree = stringThree;
+        this.stringFour = stringFour;
+        this.stringFive = stringFive;
+    }
 }
 
