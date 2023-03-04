@@ -57,3 +57,7 @@
     -fx-background-color: #b01d07;
     -fx-text-fill: white;
 }
+
+.birthday{
+    -fx-font-size: 16;
+}
