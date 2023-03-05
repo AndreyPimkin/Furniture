@@ -43,6 +43,10 @@ public class ModeratorController {
     private final ObservableList<OneStrings> listFurniture = FXCollections.observableArrayList();
     DatabaseHandler dbHandler = new DatabaseHandler();
 
+    OneStrings oneStrings;
+
+    OneStrings oneStringsTwo;
+
     @FXML
     void initialize() {
         try {
@@ -53,12 +57,24 @@ public class ModeratorController {
         }
 
         acceptButton.setOnAction(actionEvent -> {
-
+            oneStrings = moderatorTable.getSelectionModel().getSelectedItem();
+            oneStringsTwo = new OneStrings();
+            oneStringsTwo.setStringOne(oneStrings.getStringOne());
+            oneStringsTwo.setStringOne("Передан в разработку");
+            dbHandler.changeFurniture(oneStringsTwo);
+            refreshTable();
         });
+
 
         refuseButton.setOnAction(actionEvent -> {
-
+            oneStrings = moderatorTable.getSelectionModel().getSelectedItem();
+            oneStringsTwo = new OneStrings();
+            oneStringsTwo.setStringOne(oneStrings.getStringOne());
+            oneStringsTwo.setStringOne("Отменен");
+            dbHandler.changeFurniture(oneStringsTwo);
+            refreshTable();
         });
+
         number.setCellValueFactory(new PropertyValueFactory<>("stringOne"));
         fullName.setCellValueFactory(new PropertyValueFactory<>("stringTwo"));
         phone.setCellValueFactory(new PropertyValueFactory<>("stringThree"));
@@ -79,7 +95,21 @@ public class ModeratorController {
                     rs.getString(4), rs.getString(5)));
         }
 
+    }
 
+    private void refreshTable() {
+        moderatorTable.getItems().clear();
+        try {
+            initOrders();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        number.setCellValueFactory(new PropertyValueFactory<>("stringOne"));
+        fullName.setCellValueFactory(new PropertyValueFactory<>("stringTwo"));
+        phone.setCellValueFactory(new PropertyValueFactory<>("stringThree"));
+        numberFurniture.setCellValueFactory(new PropertyValueFactory<>("stringFour"));
+        nameFurniture.setCellValueFactory(new PropertyValueFactory<>("stringFive"));
+        moderatorTable.setItems(listFurniture);
     }
 
 }

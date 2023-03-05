@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb4d2c6b-fa78-4ec8-9cc0-ad7a94629add" name="Changes" comment="Окно покупок четвертый вариант и сырая регистрация">
+    <list default="true" id="bb4d2c6b-fa78-4ec8-9cc0-ad7a94629add" name="Changes" comment="Сырой модератор">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/AuthorizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/POJO/OneStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/POJO/OneStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/ModeratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/ModeratorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/server/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/server/DatabaseHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/pimki/IdeaProjects/Baikal",
+    "last_opened_file_path": "C:/Users/pimki/IdeaProjects/BuiltFurniture",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,7 +93,8 @@
       <workItem from="1677774427402" duration="4649000" />
       <workItem from="1677785671897" duration="126000" />
       <workItem from="1677916036526" duration="4516000" />
-      <workItem from="1677943896844" duration="5774000" />
+      <workItem from="1677943896844" duration="6089000" />
+      <workItem from="1678003462373" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="Авторизация без проверок">
       <created>1677613807331</created>
@@ -133,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677947142347</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Сырой модератор">
+      <created>1677961678457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677961678457</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +162,7 @@
     <MESSAGE value="Окно покупок второй вариант" />
     <MESSAGE value="Окно покупок третий вариант" />
     <MESSAGE value="Окно покупок четвертый вариант и сырая регистрация" />
-    <option name="LAST_COMMIT_MESSAGE" value="Окно покупок четвертый вариант и сырая регистрация" />
+    <MESSAGE value="Сырой модератор" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сырой модератор" />
   </component>
 </project>

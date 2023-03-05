@@ -72,7 +72,7 @@ public class AuthorizationController {
                             openWindow("/ru/penza/builtfurniture/moderator.fxml", buttonOpenReg, "Модератор");
                         }
                         else if (resultAuto.getString("role").equals("Мастер")) {
-                            openWindow("ru/penza/builtfurniture/master.fxml", buttonOpenReg, "Регистрация");
+                            openWindow("ru/penza/builtfurniture/master.fxml", buttonOpenReg, "Мастер");
                         }
                         else if (resultAuto.getString("role").equals("Рабочий")) {
                             openWindow("ru/penza/builtfurniture/worker.fxml", buttonOpenReg, "Регистрация");
@@ -105,5 +105,7 @@ public class AuthorizationController {
         stage.setTitle(title);
         stage.show();
     }
+
+
 
 }

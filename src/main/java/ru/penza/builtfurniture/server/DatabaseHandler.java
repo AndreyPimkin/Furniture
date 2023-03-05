@@ -159,6 +159,19 @@ public class DatabaseHandler {
         return resSet;
     }
 
+    public void changeFurniture(OneStrings oneStrings) {
+        String insert = "UPDATE purchase SET " +
+                "status = ?" +
+                "WHERE id_purchase = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            prSt.setString(1, oneStrings.getStringTwo());
+            prSt.setString(2, oneStrings.getStringOne());
+            prSt.executeUpdate();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
 
