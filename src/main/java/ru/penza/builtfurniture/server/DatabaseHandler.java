@@ -159,9 +159,39 @@ public class DatabaseHandler {
         return resSet;
     }
 
+    public ResultSet getFurnitureByMaster() {
+        ResultSet resSet = null;
+        String select = "SELECT purchase.id_purchase, purchase.date,furniture.id_furniture, furniture.type, " +
+                "furniture.color, furniture.length,  furniture.width,  furniture.height , purchase.status" +
+                "FROM purchase " +
+                "INNER JOIN furniture ON purchase.id_furniture = furniture.id_furniture " +
+                "WHERE purchase.status = 'Передан в разработку' OR purchase.status = 'Принято в работу' ";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resSet;
+    }
+
     public void changeFurniture(OneStrings oneStrings) {
         String insert = "UPDATE purchase SET " +
                 "status = ?" +
+                "WHERE id_purchase = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            prSt.setString(1, oneStrings.getStringTwo());
+            prSt.setString(2, oneStrings.getStringOne());
+            prSt.executeUpdate();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void changeFurnitureTwo(OneStrings oneStrings) {
+        String insert = "UPDATE purchase SET " +
+                "availability = ?" +
                 "WHERE id_purchase = ?";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);

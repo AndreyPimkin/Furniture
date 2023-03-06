@@ -74,9 +74,6 @@ public class AuthorizationController {
                         else if (resultAuto.getString("role").equals("Мастер")) {
                             openWindow("ru/penza/builtfurniture/master.fxml", buttonOpenReg, "Мастер");
                         }
-                        else if (resultAuto.getString("role").equals("Рабочий")) {
-                            openWindow("ru/penza/builtfurniture/worker.fxml", buttonOpenReg, "Регистрация");
-                        }
                     }
 
                 }

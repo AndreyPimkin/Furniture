@@ -7,6 +7,7 @@ public class OneStrings {
     private String stringFour;
     private String stringFive;
     private String stringSix;
+    private String stringSeven;
     private String stringEight;
     private String stringNine;
     private String stringTen;
@@ -19,6 +20,14 @@ public class OneStrings {
         this.stringOne = stringOne;
         this.stringTwo = stringTwo;
         this.stringThree = stringThree;
+    }
+
+    public String getStringSeven() {
+        return stringSeven;
+    }
+
+    public void setStringSeven(String stringSeven) {
+        this.stringSeven = stringSeven;
     }
 
     public String getStringOne() {
@@ -108,6 +117,16 @@ public class OneStrings {
         this.stringThree = stringThree;
         this.stringFour = stringFour;
         this.stringFive = stringFive;
+    }
+
+    public OneStrings(String stringOne, String stringTwo, String stringThree, String stringFour, String stringFive, String stringSix, String stringSeven) {
+        this.stringOne = stringOne;
+        this.stringTwo = stringTwo;
+        this.stringThree = stringThree;
+        this.stringFour = stringFour;
+        this.stringFive = stringFive;
+        this.stringSix = stringSix;
+        this.stringSeven = stringSeven;
     }
 }
 
