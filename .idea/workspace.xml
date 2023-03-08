@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb4d2c6b-fa78-4ec8-9cc0-ad7a94629add" name="Changes" comment="второй вариант модератор">
+    <list default="true" id="bb4d2c6b-fa78-4ec8-9cc0-ad7a94629add" name="Changes" comment="мастер сырой">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/AuthorizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/POJO/OneStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/POJO/OneStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/server/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/penza/builtfurniture/server/DatabaseHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,19 +33,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pimki/IdeaProjects/BuiltFurniture&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/pimki/IdeaProjects/Baikal",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pimki\IdeaProjects\BuiltFurniture\src\main\resources" />
@@ -95,7 +94,8 @@
       <workItem from="1677916036526" duration="4516000" />
       <workItem from="1677943896844" duration="6089000" />
       <workItem from="1678003462373" duration="2403000" />
-      <workItem from="1678127796226" duration="2011000" />
+      <workItem from="1678127796226" duration="2344000" />
+      <workItem from="1678274695659" duration="3780000" />
     </task>
     <task id="LOCAL-00001" summary="Авторизация без проверок">
       <created>1677613807331</created>
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678005417640</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="мастер сырой">
+      <created>1678130261741</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678130261741</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +179,7 @@
     <MESSAGE value="Окно покупок четвертый вариант и сырая регистрация" />
     <MESSAGE value="Сырой модератор" />
     <MESSAGE value="второй вариант модератор" />
-    <option name="LAST_COMMIT_MESSAGE" value="второй вариант модератор" />
+    <MESSAGE value="мастер сырой" />
+    <option name="LAST_COMMIT_MESSAGE" value="мастер сырой" />
   </component>
 </project>

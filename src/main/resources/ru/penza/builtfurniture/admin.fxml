@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="ru.penza.builtfurniture.AdminController">
+  <tabs>
+    <Tab text="Клиенты">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableClient" layoutX="21.0" layoutY="27.0" prefHeight="200.0" prefWidth="563.0">
+                    <columns>
+                      <TableColumn fx:id="idClientColumn" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="fullNameClientColumn" prefWidth="75.0" text="ФИО" />
+                        <TableColumn fx:id="dateClientColumn" prefWidth="117.0" text="День рождение" />
+                        <TableColumn fx:id="phoneClientColumn" prefWidth="93.0" text="Номер" />
+                        <TableColumn fx:id="passwordClientColumn" prefWidth="202.0" text="Пароль" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="addClient" layoutX="504.0" layoutY="299.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="85.0" text="Добавить" />
+                  <Button fx:id="deleteClient" layoutX="504.0" layoutY="332.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="85.0" text="Удалить" />
+                  <TextField fx:id="fullNameClient" layoutX="21.0" layoutY="287.0" promptText="ФИО" />
+                  <TextField fx:id="phoneClient" layoutX="186.0" layoutY="287.0" promptText="Номер" />
+                  <TextField fx:id="passwordClient" layoutX="186.0" layoutY="332.0" promptText="Пароль" />
+                  <TextField fx:id="dateClient" layoutX="21.0" layoutY="332.0" promptText="День рождение" />
+               </children>
+            </Pane>
+         </content>
+    </Tab>
+    <Tab text="Мебель">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableFurniture" layoutX="19.0" layoutY="29.0" prefHeight="200.0" prefWidth="563.0">
+                     <columns>
+                        <TableColumn fx:id="idFurnitureColumn" prefWidth="33.0" text="ID" />
+                        <TableColumn fx:id="availabilityColumn" prefWidth="29.0" text="Доступность" />
+                        <TableColumn fx:id="typeColumn" prefWidth="35.0" text="Название" />
+                        <TableColumn fx:id="priceColumn" prefWidth="29.0" text="Цена" />
+                        <TableColumn fx:id="materialColumn" prefWidth="34.0" text="Материал" />
+                        <TableColumn fx:id="dateFurnitureColumn" prefWidth="34.0" text="Дата производства" />
+                        <TableColumn fx:id="colorColumn" prefWidth="34.0" text="Цвет" />
+                        <TableColumn fx:id="lengthColumn" prefWidth="34.0" text="Длина" />
+                        <TableColumn fx:id="widthColumn" prefWidth="34.0" text="Ширина" />
+                        <TableColumn fx:id="heightColumn" prefWidth="34.0" text="Высота" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content>
+    </Tab>
+      <Tab text="Заказы">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tablePurchase" layoutX="19.0" layoutY="30.0" prefHeight="200.0" prefWidth="563.0">
+                     <columns>
+                        <TableColumn fx:id="idPurchaseColumn" prefWidth="44.0" text="ID" />
+                        <TableColumn fx:id="idClientPColumn" prefWidth="106.0" text="ID клиента" />
+                        <TableColumn fx:id="idFurniturePColumn" prefWidth="117.0" text="ID мебели" />
+                        <TableColumn fx:id="datePColumn" prefWidth="93.0" text="Дата" />
+                        <TableColumn fx:id="statusPColumn" prefWidth="202.0" text="Статус" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+      <Tab text="Сотрудники">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableStaff" layoutX="19.0" layoutY="20.0" prefHeight="200.0" prefWidth="551.0">
+                     <columns>
+                        <TableColumn fx:id="idStaffColumn" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="fullNameStaffColumn" prefWidth="75.0" text="ФИО" />
+                        <TableColumn fx:id="phoneStaffColumn" prefWidth="110.0" text="Номер" />
+                        <TableColumn fx:id="passwordStaffColumn" prefWidth="92.0" text="Пароль" />
+                        <TableColumn fx:id="roleStaffColumn" prefWidth="198.0" text="Роль" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="fullNameStaff" layoutX="33.0" layoutY="247.0" promptText="ФИО" />
+                  <TextField fx:id="phoneStaff" layoutX="33.0" layoutY="292.0" promptText="Номер" />
+                  <TextField fx:id="passwordStaff" layoutX="205.0" layoutY="247.0" promptText="Пароль" />
+                  <ComboBox fx:id="roleStaff" layoutX="204.0" layoutY="292.0" prefWidth="150.0" promptText="Роль" />
+                  <Button fx:id="addStaff" layoutX="492.0" layoutY="247.0" mnemonicParsing="false" text="Добавить" />
+                  <Button fx:id="deleteStaff" layoutX="491.0" layoutY="292.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -159,6 +159,41 @@ public class DatabaseHandler {
         return resSet;
     }
 
+    public ResultSet getStaff() {
+        ResultSet resSet = null;
+        String select = "SELECT * FROM staff";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(select);
+            resSet = prSt.executeQuery();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resSet;
+    }
+
+    public void addStaff(OneStrings oneStrings) throws ClassNotFoundException {
+        String insert = "INSERT INTO staff VALUES(?,?,?,?)";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            prSt.setString(1, oneStrings.getStringOne());
+            prSt.setString(2, oneStrings.getStringTwo());
+            prSt.setString(3, oneStrings.getStringThree());
+            prSt.setString(4, oneStrings.getStringFour());
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();}}
+
+    public void deleteStaff(OneStrings oneStrings) throws ClassNotFoundException {
+        String insert = "DELETE FROM staff WHERE id_staff = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            prSt.setString(1, oneStrings.getStringOne());
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();}}
+
+
+
     public ResultSet getFurnitureByMaster() {
         ResultSet resSet = null;
         String select = "SELECT purchase.id_purchase, purchase.date,furniture.id_furniture, furniture.type, " +
